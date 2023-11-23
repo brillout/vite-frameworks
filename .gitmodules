@@ -25,3 +25,6 @@
 [submodule "sveltekit"]
 	path = sveltekit
 	url = git@github.com:sveltejs/kit
+[submodule "remix"]
+	path = remix
+	url = git@github.com:remix-run/remix
