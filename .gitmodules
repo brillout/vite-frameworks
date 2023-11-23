@@ -22,3 +22,6 @@
 [submodule "redwood"]
 	path = redwood
 	url = git@github.com:redwoodjs/redwood
+[submodule "sveltekit"]
+	path = sveltekit
+	url = git@github.com:sveltejs/kit
