@@ -28,3 +28,6 @@
 [submodule "remix"]
 	path = remix
 	url = git@github.com:remix-run/remix
+[submodule "waku"]
+	path = waku
+	url = git@github.com:dai-shi/waku
