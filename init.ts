@@ -18,15 +18,15 @@ await main()
 
 async function main() {
   await $`mkdir -p repos/`;
-
-  const alreadyCloned = await $`ls repos/`.text()
-
-  const repos = REPOS.filter(r => !alreadyCloned.includes(r))
-  for (const repo of repos) {
-    if (alreadyCloned.includes(getRepoDir(repo))) {
-      await $`(cd repos/ && git pull)`;
+  const repos = (await $`ls repos/`.text()).split('\n').filter(Boolean)
+  for (const repoURL of REPOS) {
+    const repo = getRepoDir(repoURL)
+    const repoDir = `repos/${repo}`
+    console.log(repoDir)
+    if (repos.includes(repo)) {
+      await $`(cd ${repoDir} && git pull)`;
     } else {
-      await $`(cd repos && git clone ${repo})`;
+      await $`(cd repos && git clone ${repoURL})`;
     }
   }
 }
