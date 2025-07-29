@@ -10,8 +10,11 @@ const REPOS = [
   'git@github.com:BuilderIO/qwik',
   'git@github.com:redwoodjs/redwood',
   'git@github.com:sveltejs/kit',
+  'git@github.com:sveltejs/vite-plugin-svelte',
   'git@github.com:remix-run/remix',
+  'git@github.com:remix-run/react-router',
   'git@github.com:dai-shi/waku',
+  'git@github.com:TanStack/router'
 ] as const
 
 await main()
